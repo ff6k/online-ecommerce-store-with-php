@@ -1,0 +1,32 @@
+
+
+body{
+	
+	width:80%;
+	margin: auto;
+}
+
+nav{
+	width: 40%;
+	position: relative;
+	border: 1px solid #FFFF00;
+	float: left;
+	text-align: center;
+}
+
+#logo{
+	float:left;
+	width: 25%;
+	padding: 3%;
+}
+
+
+#cart_login_section{
+
+	display:block;
+	float: left;
+}
+
+#search{
+	float: right;
+}
