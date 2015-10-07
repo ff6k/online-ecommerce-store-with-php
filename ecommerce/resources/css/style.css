@@ -1,32 +1,103 @@
 
 
 body{
-	
-	width:80%;
 	margin: auto;
 }
 
+#container{
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: justify;
+}
+
+header{
+	margin-top: 0%;
+	margin-bottom: 10%;
+	width: 100%;
+}
+
 nav{
-	width: 40%;
-	position: relative;
-	border: 1px solid #FFFF00;
 	float: left;
+}
+
+nav li ul{
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+
+nav li:hover ul{
+	display: block;
+}
+
+nav ul{
+	display: inline;
+}
+
+nav li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
 	text-align: center;
+	float: left;
+}
+
+nav a{
+	display: block;
+	text-align: center;
+	padding: 8px;
+	border-left: 1px solid #FFFF00;
+	border-right: 1px solid #FFFF00;
+}
+
+nav li ul li{
+	float: none;
 }
 
 #logo{
 	float:left;
 	width: 25%;
 	padding: 3%;
+	margin-left: 5%;
 }
 
+#user_buttons{
+	padding-left: 100%%;
+	float: left;
+}
+
+#login {
+	display: table-row;
+	width: 100%;
+}
+
+#signup{
+	display: table-row;
+	width: 100%;
+}
 
 #cart_login_section{
-
-	display:block;
 	float: left;
 }
 
 #search{
+	padding: 8px;
+}
+
+#carrito{
+	padding-top: 3px;
+	padding-right: 20%;
+}
+
+#fi_header{
 	float: right;
+	width: 10%;
+	padding-right: 10%;
+}
+
+#footer_content{
+	margin-right: 20%;
+	margin-left: 20%;
+	text-align: center;
 }

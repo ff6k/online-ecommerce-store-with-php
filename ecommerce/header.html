@@ -1,38 +1,56 @@
-<span id="header_section"> 
-	<img id="logo" src="resources/img/logotip.png" />
+<header id="header">
+	<span id="header_section"> 
+		<img id="logo" src="resources/img/logotip.png" />
+	</span>
 
-<span id="menu_section"> 
-	<nav>
-		<ul>
-			<li>
-				<a href="index.html">Inici</a>
-			</li>
-			<li>
-				<a href="productes.html">Productes</a>
-				<ul>
-					<li>
-						<a href="pulseres.html">Pulseres</a>
-					</li>
-					<li>
-						<a href="rellotges.html">Rellotges</a>
-					</li>
-					<li>
-						<a href="tags.html">Tags</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="tecnologia-nfc.html">Tecnologia NFC</a>
-			</li>
-		</ul>
-		
+	<span id="menu_section"> 
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Inici</a>
+				</li>
+				<li>
+					<a href="productes.html">Productes</a>
+					<ul>
+						<li>
+							<a href="pulseres.html">Pulseres</a>
+						</li>
+						<li>
+							<a href="rellotges.html">Rellotges</a>
+						</li>
+						<li>
+							<a href="tags.html">Tags</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="tecnologia-nfc.html">Tecnologia NFC</a>
+					<ul>
+						<li>
+							<a href="quees.html">Què és?</a>
+						</li>
+						<li>
+							<a href="aplicacio.html">Aplicació</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 		<input type="search" autocomplete="on" id="search" placeholder="Buscar"/>
-	</nav> 
-</span> 
-	<div id="cart_login_section">
-
-		<input type="text" id="username"/>
-		<input type="password" id="password"/>
-
-	</div>
-</span>
+	</span> 
+	<span id="fi_header">
+		<div id="cart_login_section">
+			<table id="user_buttons">
+				<tr>
+					<td><input type="submit" id="login" value="Login"/></td>
+				</tr>
+				<tr>
+					<td><input type="submit" id="signup" value="Signup"/></td>
+				</tr>
+			</table>
+		</div>
+		<div id="carrito">
+			<img src="./resources/img/carrito.png" height="40px" width="45px"/>
+		</div>
+	</span>
+</header>
