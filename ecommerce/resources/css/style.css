@@ -2,23 +2,35 @@
 
 body{
 	margin: auto;
+	background-color: #EBE8E4;
+	color: #222;
+	font-family: Arial, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	width:75%;
 }
 
 #container{
-	margin-left: 20%;
-	margin-right: 20%;
 	text-align: justify;
+	width: 80%;
+	margin: auto;
 }
 
 header{
 	margin-top: 0%;
-	margin-bottom: 10%;
-	width: 100%;
+	margin-bottom: 20%;
+	
 }
 
 nav{
-	float: left;
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 4px;
+	color: #888;
+	background: transparent;
 }
+
+
 
 nav li ul{
 	display: none;
@@ -55,15 +67,16 @@ nav li ul li{
 	float: none;
 }
 
+
 #logo{
 	float:left;
-	width: 25%;
+	width: 20%;
 	padding: 3%;
 	margin-left: 5%;
 }
 
 #user_buttons{
-	padding-left: 100%%;
+	padding-left: 0%;
 	float: left;
 }
 
