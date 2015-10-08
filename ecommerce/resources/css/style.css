@@ -24,10 +24,10 @@ header{
 
 nav{
 	background-color: #fff;
-	border: 1px solid #dedede;
-	border-radius: 4px;
 	color: #888;
 	background: transparent;
+	position: relative;
+    top: 70px;
 }
 
 
