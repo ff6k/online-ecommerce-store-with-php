@@ -28,22 +28,22 @@ nav{
 }
 
 nav li ul{
-	display: none;
+	display: none; /*Això farà que no es vegi la part desplegable*/
 	margin: 0;
-	padding: 0;
+	padding: 0; /*Juntament amb el margin fan que surti enganxat i no flotant a qualsevol lloc*/
 	height: auto;
 }
 
 nav li:hover ul{
-	display: block;
+	display: block; /*Amb el hover (indica que està a sobre) es mostrarà el desplegable*/
 }
 
 nav ul{
-	display: inline;
+	display: inline; /*El menú en una mateixa línia*/
 }
 
 nav li{
-	list-style: none;
+	list-style: none; /*No hi haurà ni bullets, ni fletxes ni res per mostrar que és una llista*/
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -53,7 +53,7 @@ nav li{
 nav a{
 	display: block;
 	text-align: center;
-	text-decoration: none;
+	text-decoration: none; /*El text ja no es mostra com un link qualsevol*/
 	color: white;
 	padding: 8px;
 	border: 1px outset white;
@@ -61,7 +61,7 @@ nav a{
 }
 
 nav a:hover{
-	background-color: #99CCFF;
+	background-color: #99CCFF; /*Quan el cursor estigui a sobre, agafa una tonalitat més clara*/
 }
 
 nav li ul li{
