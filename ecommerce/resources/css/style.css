@@ -97,11 +97,21 @@ nav li ul li{
 #search{
 	float: left;
 	padding: 8px;
-	width: 50%;
+	width: 75%;
+	border: 2px solid white;
 }
 #search_button{
-	float: left;
-	margin-top: 8px;
+	left: -60px;
+	position: relative;
+	color: white;
+	background-color:#6699FF;
+	border:2px solid #6699FF;
+	height: 35px;
+}
+
+#search_button:hover {
+	background-color: #99CCFF;
+	border: 2px solid #99CCFF;
 }
 
 #carrito{
