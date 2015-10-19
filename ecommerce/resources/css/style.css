@@ -10,6 +10,10 @@ body{
 	text-align: justify;
 	width: 60%;
 	margin: auto;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 20px;
+	padding-right: 20px;
 	background-color: white;
 }
 
@@ -179,4 +183,14 @@ nav li ul li{
 
 #rig li p{
 	text-align: center;
+}
+
+.noDisponible{
+	text-align: center;
+	font-style: italic;
+	color: grey;
+	background-color: #FFFF99;
+	padding: 8px;
+	margin-right: 20%;
+	margin-left: 20%;
 }
