@@ -24,3 +24,9 @@ function nextImageSlider(){
     setTimeout(nextImageSlider, 5000);
 }
 
+function enter(e){
+    if(e.keyCode == 13){
+        buscar();
+    }
+    return false;
+}
