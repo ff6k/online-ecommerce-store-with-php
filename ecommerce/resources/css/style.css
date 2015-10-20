@@ -140,6 +140,8 @@ nav li ul li{
 	float: right;
 	width: 20%;
 	margin-top: 3%;
+	z-index: 9999;
+	position: relative;
 }
 
 #footer{
