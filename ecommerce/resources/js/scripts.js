@@ -1,6 +1,15 @@
 
 function buscar() {
-alert("No es pot buscar encara...");
+
+	var searchEditText = document.getElementById("search");
+	var textSearch = searchEditText.value;
+
+	if(textSearch != ""){
+
+		alert("Has buscat: "+searchEditText.value);
+	}else{
+		alert("Si us plau, introdueix un element de cerca");
+	}
 }
 
 function nextImageSlider(){
@@ -12,12 +21,15 @@ function nextImageSlider(){
 	if(imageBanner1 != null){
 		imageBanner1.src = "resources/img/banner2.png";
 		imageBanner1.id = "image_banner_2";
+		imageBanner1.href ="http://www.google.es"
     }else if(imageBanner2 != null){
     	imageBanner2.src = "resources/img/banner3.png";
     	imageBanner2.id = "image_banner_3";
+    	imageBanner2.href ="http://www.google.es"
     }else if(imageBanner3 != null){
     	imageBanner3.src = "resources/img/banner1.png";
     	imageBanner3.id = "image_banner_1";
+    	imageBanner3.href ="http://www.google.es"
     }
 
  
