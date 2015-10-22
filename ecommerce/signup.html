@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<meta charset="utf-8">
+	<title>NFC World - Signup</title>
+	<meta name="description" content="La millor botiga de la xarxa.">
+	<meta name="author" content="Grup TDIW-D10">
+
+	<script src="resources/js/jquery-1.11.3.min.js"></script>
+
+	<link type="text/css" href="resources/css/style.css" rel="stylesheet">
+	<script src="resources/js/scripts.js"></script>
+  
+	<link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="resources/img/favicon.ico" type="image/x-icon">
+
+	<script> 
+	$(function(){
+		$("#header").load("header.html"); 
+		$("#footer").load("footer.html"); 
+	});
+	</script> 
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<section id="container">
+	<form id="Registre">
+		<div id="content">
+			<div id="registre-esquerra">
+				Nom: <span>*</span></br>
+				<input type="text" autocomplete="on" placeholder="Nom" id="nom"></br>
+				Email: <span>*</span></br>
+				<input type="text" autocomplete="on" placeholder="exemple@exemple.com" id="email"></br>
+				Contrasenya:</br>
+				<input type="password" placeholder="********" id="password"></br>
+				<div id="registre-entra">
+					<input type="submit" value="Registra'm">
+				</div>
+			</div>
+			<div id="registre-dreta">
+				Cognoms: <span>*</span></br>
+				<input type="text" autocomplete="on" placeholder="Cognoms" id="cognoms"></br>
+				Adreça: <span>*</span></br>
+				<input type="text" autocomplete="on" placeholder="Adreça" id="direccio"></br>
+				DNI: <span>*</span></br>
+				<input type="text" placeholder="DNI" id="DNI"></br>
+				Telèfon:</br>
+				<input type="text" placeholder="Fix" id="telefon"></br>
+				Mòbil:</br>
+				<input type="text" placeholder="Mòbil" id="mobil"></br>
+			</div>
+		</div>
+	</form>
+</br>
+	Els camps marcats amb (*) són obligatoris. Siusplau doneu almenys un número de contacte.</br>
+</section>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

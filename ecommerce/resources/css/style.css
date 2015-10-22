@@ -227,3 +227,46 @@ nav li ul li{
 	width: 100%;
 	margin-bottom: 20px;
 }
+
+#Registre{
+	display: table;
+	border: 2px solid #0066FF;
+	border-radius: 10px;
+	padding: 8px;
+}
+
+#content{
+	display: table-row;
+	padding: 8px;
+}
+
+#Registre input{
+	border-radius: 5px;
+	margin: 5px;
+	padding: 8px;
+	border: 2px inset #6699FF;
+}
+
+#Registre span{
+	color:red;
+	font-size: 20px;
+	font-weight:bold;
+}
+
+#registre-esquerra{
+	display: table-cell;
+	padding-left: 50px;
+}
+
+#registre-dreta{
+	padding-left: 300px;
+	padding-right: 50px;
+	display:table-cell;
+}
+
+#registre-entra input{
+	background-color: #0066FF;
+	color: white;
+	margin-top: 40px;
+	margin-left: 50px;
+}
