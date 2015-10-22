@@ -109,7 +109,7 @@ nav li ul li{
 	color: white;
 	float:left;
 	background-color:#6699FF;
-	margin-right: 10%
+	margin-right: 10%;
 	border:3px 0px 0px 0px solid #FFFFFF;
 	height: 35px;
 }
@@ -215,7 +215,6 @@ nav li ul li{
 	margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 #Registre{
 	display: table;
 	border: 2px solid #0066FF;
@@ -257,7 +256,8 @@ nav li ul li{
 	color: white;
 	margin-top: 40px;
 	margin-left: 50px;
-=======
+}
+
 .modalDialog {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
@@ -286,5 +286,4 @@ nav li ul li{
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: #fff;
->>>>>>> origin/master
 }
