@@ -6,6 +6,8 @@ body{
 	font-size: 15px;
 }
 
+
+
 #container{
 	text-align: justify;
 	width: 60%;
@@ -18,7 +20,7 @@ body{
 
 header{
 	margin-top: 0%;
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 	margin-left: 20%;
 	margin-right: 20%;
 }
@@ -76,17 +78,12 @@ nav li ul li{
 	padding: 3%;
 }
 
-#user_buttons{
-	padding-left: 0%;
-	float: left;
-}
-
 #login {
-	display: table-row;
 	width: 100%;
-	background-color:#6699FF;
-	border:2px solid #6699FF;
+	background-color: green;
+	border:3px 0px 0px 0px solid #FFFFFF;
 	color: white;
+	
 }
 
 #login:hover{
@@ -94,18 +91,6 @@ nav li ul li{
 	border: 2px solid #99CCFF;
 }
 
-#signup{
-	display: table-row;
-	width: 100%;
-	background-color:#6699FF;
-	border:2px solid #6699FF;
-	color: white;
-}
-
-#signup:hover{
-	background-color: #99CCFF;
-	border: 2px solid #99CCFF;
-}
 
 #cart_login_section{
 	float: left;
@@ -114,16 +99,18 @@ nav li ul li{
 #search{
 	float: left;
 	padding: 8px;
-	width: 75%;
+	margin-left: 10%;
+	width: 65%;
 	border: 2px solid white;
 }
 
 #search_button{
-	left: -60px;
-	position: relative;
+	width: 15%;
 	color: white;
+	float:left;
 	background-color:#6699FF;
-	border:2px solid #6699FF;
+	margin-right: 10%
+	border:3px 0px 0px 0px solid #FFFFFF;
 	height: 35px;
 }
 
@@ -228,6 +215,7 @@ nav li ul li{
 	margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 #Registre{
 	display: table;
 	border: 2px solid #0066FF;
@@ -269,4 +257,34 @@ nav li ul li{
 	color: white;
 	margin-top: 40px;
 	margin-left: 50px;
+=======
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+>>>>>>> origin/master
 }

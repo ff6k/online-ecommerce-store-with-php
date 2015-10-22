@@ -11,13 +11,13 @@
 				<a id="products_option" href="productes.html">Productes</a>
 				<ul>
 					<li>
-						<a href="pulseres.html">Pulseres</a>
+						<a href="producte_categoria.html">Pulseres</a>
 					</li>
 					<li>
-						<a href="rellotges.html">Rellotges</a>
+						<a href="producte_categoria.html">Rellotges</a>
 					</li>
 					<li>
-						<a href="tags.html">Tags</a>
+						<a href="producte_categoria.html">Tags</a>
 					</li>
 				</ul>
 			</li>
@@ -33,12 +33,17 @@
 				</ul>
 				<li>
 					<input type="search" autocomplete="on" id="search" placeholder="Buscar" onkeypress="enter(event)"/>
-					<button onclick="buscar()" id="search_button">Buscar</button>
+					<button onclick="buscar()" id="search_button"><img height="20px" style="margin:auto;" src="resources/img/search_icon.png"></img></button>
+				</li>
+				<li>
+					<a href="#openModal" id="login">Login</a>
+						
 				</li>
 			</li>
 		</ul>
 	</nav>
 </span> 
+<<<<<<< HEAD
 <span id="fi_header">
 	<div id="cart_login_section">
 		<table id="user_buttons">
@@ -52,5 +57,21 @@
 	</div>
 	<div id="carrito">
 		<img src="./resources/img/carrito.png" height="30px" width="35px"/>
+=======
+
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Accés usuari</h2>
+		<p>Usuari</p>
+	
+		<input type="text" id="username_input" placeholder="Nom d'usuari"/>
+	
+		<p>Password</p>
+	
+		<input type="password" id="password_input" placeholder="Contrasenya"/>
+		
+>>>>>>> origin/master
 	</div>
-</span>
+
+</div>
