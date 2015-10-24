@@ -1,6 +1,6 @@
 body{
 	margin: auto;
-	background-color: #E6E6E6;
+	background-color: #CCE6FF;
 	font-family: Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -286,4 +286,16 @@ nav li ul li{
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: #fff;
+}
+
+#LoginButton{
+	text-align: center;
+	color: white;
+	padding: 8px;
+	border: 1px outset white;
+	background-color: #6699FF;	
+}
+
+#LoginButton:hover{
+	background-color: #99CCFF;
 }
