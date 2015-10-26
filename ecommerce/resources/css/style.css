@@ -6,8 +6,6 @@ body{
 	font-size: 15px;
 }
 
-
-
 #container{
 	text-align: justify;
 	width: 60%;
@@ -298,4 +296,55 @@ nav li ul li{
 
 #LoginButton:hover{
 	background-color: #99CCFF;
+}
+
+#home_banner{
+	display: block;
+}
+
+#slider{
+	list-style: none;
+	position: relative;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 300px;
+}
+
+#slider_left, #slider_right{
+	position: absolute;
+	display: block;
+	z-index: 9999;
+	top: 45%;
+	background-color: #6699FF;
+	padding: 15px;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+	font-size: 18px;
+	z-index: 999;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#slider_left:hover, #slider_right:hover{
+	opacity: 1;
+	-webkit-transition: all 0.5s ease;
+}
+
+#slider_right{
+	right: 19.85%;
 }
