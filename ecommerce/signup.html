@@ -27,30 +27,30 @@
 <header id="header"></header>
 
 <section id="container">
-	<form id="Registre">
+	<form id="Registre" method="POST" action="registre.php">
 		<div id="content">
 			<div id="registre-esquerra">
 				Nom: <span>*</span></br>
-				<input type="text" autocomplete="on" placeholder="Nom" id="nom"></br>
+				<input type="text" autocomplete="on" placeholder="Nom" name="nom"></br>
 				Email: <span>*</span></br>
-				<input type="text" autocomplete="on" placeholder="exemple@exemple.com" id="email"></br>
+				<input type="text" autocomplete="on" placeholder="exemple@exemple.com" name="email"></br>
 				Contrasenya:</br>
-				<input type="password" placeholder="********" id="password"></br>
+				<input type="password" placeholder="********" name="password"></br>
 				<div id="registre-entra">
-					<input type="submit" value="Registra'm">
+					<input type="submit" id="submit" value="Registra'm">
 				</div>
 			</div>
 			<div id="registre-dreta">
 				Cognoms: <span>*</span></br>
-				<input type="text" autocomplete="on" placeholder="Cognoms" id="cognoms"></br>
+				<input type="text" autocomplete="on" placeholder="Cognoms" name="cognoms"></br>
 				Adreça: <span>*</span></br>
-				<input type="text" autocomplete="on" placeholder="Adreça" id="direccio"></br>
+				<input type="text" autocomplete="on" placeholder="Adreça" name="direccio"></br>
 				DNI: <span>*</span></br>
-				<input type="text" placeholder="DNI" id="DNI"></br>
+				<input type="text" placeholder="DNI" name="DNI"></br>
 				Telèfon:</br>
-				<input type="text" placeholder="Fix" id="telefon"></br>
+				<input type="text" placeholder="Fix" name="telefon"></br>
 				Mòbil:</br>
-				<input type="text" placeholder="Mòbil" id="mobil"></br>
+				<input type="text" placeholder="Mòbil" name="mobil"></br>
 			</div>
 		</div>
 	</form>

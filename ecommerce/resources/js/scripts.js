@@ -45,15 +45,15 @@ function sliderLeft(){
     if(imageBanner1 != null){
         imageBanner1.src = "resources/img/banner3.png";
         imageBanner1.id = "image_banner_3";
-        imageBanner1.href ="http://www.google.es"
+        imageBanner1.link("http://www.google.es");
     }else if(imageBanner2 != null){
         imageBanner2.src = "resources/img/banner1.png";
         imageBanner2.id = "image_banner_1";
-        imageBanner2.href ="http://www.google.es"
+        imageBanner2.link("http://www.google.es");
     }else if(imageBanner3 != null){
         imageBanner3.src = "resources/img/banner2.png";
         imageBanner3.id = "image_banner_2";
-        imageBanner3.href ="http://www.google.es"
+        imageBanner3.link("http://www.google.es");
     }
 }
 
