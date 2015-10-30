@@ -29,7 +29,7 @@ class DB_CONNECT {
         $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysqli_error());
 
         // Selecing database
-        //$db = mysqli_select_db(DB_DATABASE) or die(mysqli_error());
+        $db = mysqli_select_db($con, DB_DATABASE) or die(mysqli_error($con));
 
         // returing connection cursor
         return $con;

@@ -47,12 +47,14 @@
 <div id="openModal" class="modalDialog">
 	<div>
 		<a href="#close" title="Close" class="close"><img src="resources/img/close.png" height="30px" width="30px"/></a>
-		<h2>Accés usuari</h2>
-		<p>Usuari</p>
-		<input type="text" id="username_input" placeholder="Email"/>	
-		<p>Password</p>
-		<input type="password" id="password_input" placeholder="Contrasenya"/></br></br>
-		<input type="submit" value="Entra" id="LoginButton"/>
-		<p>Si no t'has registrat ho pots fer <a href="signup.html">aquí</a>.</p>
+		<form method="POST" action="login.php">
+			<h2>Accés usuari</h2>
+			<p>Usuari</p>
+			<input type="text" id="username_input" name="email" placeholder="Email"/>	
+			<p>Password</p>
+			<input type="password" id="password_input" name="password" placeholder="Contrasenya"/></br></br>
+			<input type="submit" value="Entra" id="LoginButton" name="LoginButton"/>
+			<p>Si no t'has registrat ho pots fer <a href="signup.html">aquí</a>.</p>
+		</form>
 	</div>
 </div>
