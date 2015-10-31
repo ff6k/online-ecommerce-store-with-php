@@ -13,6 +13,19 @@ if(isset($_POST['LoginButton']))
 	elseif (!isset($_POST['password']))
 		echo "Introdueix la contrasenya<br>";
 	else{
-		# codi de login...
+		$user = $_POST['email'];
+		$pass = $_POST['password'];
+		$sql = "SELECT * FROM nfc_client WHERE Email='$user' AND Password='$pass'";
+		if($query = mysqli_query($con,$sql)){
+			$resultat = mysqli_num_rows($query);
+			if($resultat == 1)
+				echo "S'ha connectat";
+			else
+				echo "Email o contrasenya incorrectes";
+		}
 	}
 }
+
+$db->close($con);
+
+?>
