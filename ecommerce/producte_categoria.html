@@ -19,6 +19,7 @@
 		$("#header").load("header.html"); 
 		$("#footer").load("footer.html");
 	});
+	openCategory();
 	</script> 
 </head>
 
@@ -27,7 +28,7 @@
 <header id="header"></header>
 
 <section id="container">
-	
+	<?php require_once("category.php");?>
 </section>
 
 <footer id="footer"></footer>
