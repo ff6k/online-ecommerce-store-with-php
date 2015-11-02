@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 	//Ens assegurem que els camps obligatoris hi siguin
 	if(isset($_POST['nom'])&&isset($_POST['email'])&&isset($_POST['password'])&&isset($_POST['cognoms'])&&isset($_POST['direccio'])&&isset($_POST['DNI'])&&isset($_POST['telefon'])&&isset($_POST['mobil'])){
 		$sql="INSERT INTO nfc_client
-		VALUES('null', '".$_POST['nom']."', '".$_POST['cognoms']."', '".$_POST['direccio']."', '".$_POST['DNI']."','".$_POST['telefon']."','".$_POST['mobil']."','".$_POST['email']."','".$_POST['password']."');";
+		VALUES('null', '".$_POST['nom']."', '".$_POST['cognoms']."', '".$_POST['direccio']."', '".$_POST['DNI']."','".$_POST['telefon']."','".$_POST['mobil']."','".$_POST['email']."','".md5($_POST['password'])."');";
 		$query=mysqli_query($con, $sql) or die(mysqli_error($con));
 		if($query)
 			echo "T'has registrat correctament.";

@@ -30,6 +30,8 @@ class DB_CONNECT {
 
         // Selecing database
         $db = mysqli_select_db($con, DB_DATABASE) or die(mysqli_error($con));
+         
+        mysqli_set_charset($con, "utf8");  
 
         // returing connection cursor
         return $con;

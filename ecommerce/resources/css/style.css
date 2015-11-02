@@ -356,3 +356,11 @@ nav li ul li{
 #slider_right{
 	right: 19.85%;
 }
+
+#product_cell{
+	text-align: center;
+}
+
+#product_image{
+	width: 100%;
+}

@@ -96,9 +96,13 @@ function openCategory(){
     else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../../category.php?id="+id,true);
+    xmlhttp.open("GET","./category.php?id="+id, true);
     xmlhttp.send();
+    xmlhttp.onreadystatechange = function(){
+    if (xmlhttp.readyState !== 4) { return; }
     document.getElementById("container").innerHTML=xmlhttp.responseText;
+    };
+    
 
     return false;
 }
