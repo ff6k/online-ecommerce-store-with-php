@@ -9,7 +9,7 @@ $con = $db->connect();
 
 if(isset($_POST['submit'])){
 	//Ens assegurem que els camps obligatoris hi siguin
-	if($_POST['nom']!==""&&$_POST['email']!==""&&$_POST['password']!==""&&$_POST['cognoms']!==""&&$_POST['direccio']!==""&&$_POST['DNI']!==""&&($_POST['telefon']!==""||$_POST['mobil']!==""){
+	if($_POST['nom']!==""&&$_POST['email']!==""&&$_POST['password']!==""&&$_POST['cognoms']!==""&&$_POST['direccio']!==""&&$_POST['DNI']!==""&&($_POST['telefon']!==""||$_POST['mobil']!=="")){
 		$sql="INSERT INTO nfc_client
 		VALUES('null', '".$_POST['nom']."', '".$_POST['cognoms']."', '".$_POST['direccio']."', '".$_POST['DNI']."','".$_POST['telefon']."','".$_POST['mobil']."','".$_POST['email']."','".md5($_POST['password'])."');";
 		$query=mysqli_query($con, $sql) or die(mysqli_error($con));
