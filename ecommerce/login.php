@@ -14,7 +14,7 @@ if(isset($_POST['LoginButton']))
 		echo "Introdueix la contrasenya<br>";
 	else{
 		$user = $_POST['email'];
-		$pass = $_POST['password'];
+		$pass = md5($_POST['password']);
 		$sql = "SELECT * FROM nfc_client WHERE Email='$user' AND Password='$pass'";
 		if($query = mysqli_query($con,$sql)){
 			$resultat = mysqli_num_rows($query);
