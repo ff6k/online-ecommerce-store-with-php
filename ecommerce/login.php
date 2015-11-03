@@ -14,14 +14,19 @@ if(isset($_POST['LoginButton']))
 		echo "Introdueix la contrasenya<br>";
 	else{
 		$user = $_POST['email'];
-		$pass = md5($_POST['password']);
-		$sql = "SELECT * FROM nfc_client WHERE Email='$user' AND Password='$pass'";
+		$pass = $_POST['password'];
+		$sql = "SELECT * FROM nfc_client WHERE Email='$user' AND Password='".md5($pass)."'";
 		if($query = mysqli_query($con,$sql)){
 			$resultat = mysqli_num_rows($query);
-			if($resultat == 1)
-				echo "S'ha connectat";
-			else
+			$row = mysqli_fetch_assoc($query);
+			if($resultat == 1){
+				$cookie_name = "isLogged";
+				$cookie_value = $row["Nom"];
+				setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+				header("Location: index.html");
+			}else{
 				echo "Email o contrasenya incorrectes";
+			}
 		}
 	}
 }
