@@ -34,7 +34,7 @@ $sql = "SELECT * FROM nfc_producte WHERE Id_categoria='$id'";
 			<img id=\"product_image\" src=\"".$urlImatge."\" />
 			<h3>$nomProducte</h3>
 			<p>El preu d'aquest producte és de: $preuPVP €</p>
-			<button>Afegir al carret</button>
+			<button class=\"product_cell_button\">Afegir al carret</button>
 			</div>
 			</br>
 			</td>";

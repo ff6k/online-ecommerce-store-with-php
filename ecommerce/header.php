@@ -1,4 +1,5 @@
 <script src="resources/js/scripts.js"></script>
+
 <span id="header_section"> 
 	<a href="index.html"><img id="logo" src="resources/img/logotip.png" /> </a>
 </span>
@@ -70,3 +71,18 @@
 	</div>
 </div>
 
+<div id="carrito">
+	<div id="carrito_container">
+		<img id="c_img" src="resources/img/carrito.png" width="30px" height="30px"/>
+		<?php
+		if(isset($_COOKIE['carro']))
+			foreach ($producte as $_COOKIE['carro']) {
+				?><ul>
+					<li><?php echo $producte;?></li>
+				</ul>
+			<?php }
+		else
+			echo "No hi ha cap producte";
+		?>
+	</div>
+</div>

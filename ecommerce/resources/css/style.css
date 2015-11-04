@@ -119,7 +119,30 @@ nav li ul li{
 }
 
 #carrito{
-	padding-top: 8px;
+	float: right;
+	margin-right: -51.5%;
+	margin-top: 150px;
+	border: 2px outset #6699FF;
+	border-radius: 5px;
+	height: 200px;
+	background-color: white;
+	opacity: 0.5;
+	z-index: 99999; /*En teoria ja esta a dalt de tot però així me'n asseguro*/
+}
+
+#carrito:hover{
+	padding-right: 240px;
+	opacity: 1;
+	-webkit-transition: all 0.5s ease;
+}
+
+#c_img{
+	margin-left: -10px;
+	margin-top: -10px;
+	opacity: 1;
+	border: 2px solid red;
+	border-radius: 30px;
+	z-index: 99999;
 }
 
 #fi_header{
@@ -363,4 +386,15 @@ nav li ul li{
 
 #product_image{
 	width: 100%;
+}
+
+.product_cell_button{
+	background-color: #6699FF;
+	color: white;
+	border-color: #99CCFF;
+	padding: 5px;
+}
+
+.product_cell_button:hover{
+	background-color: #99CCFF;
 }
