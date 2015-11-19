@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<meta charset="utf-8">
+	<title>NFC - Productes</title>
+	<meta name="description" content="La millor botiga de la xarxa.">
+	<meta name="author" content="Grup TDIW-D10">
+
+	<script src="../resources/js/jquery-1.11.3.min.js"></script>
+
+	<link type="text/css" href="../resources/css/style.css" rel="stylesheet">
+	<script src="../resources/js/scripts.js"></script>
+  
+	<link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../resources/img/favicon.ico" type="image/x-icon">
+
+	<script> 
+	$(function(){
+		$("#header").load("../view/header.php"); 
+		$("#footer").load("../view/footer.html");
+	});
+	//openCategory();
+	</script> 
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<section id="container">
+
+
+<?php
+	
+	$prod = "<table>";
+	$i = 0;
+
+	$productes = json_decode( $productes, true );
+
+	foreach($productes as $producte){
+
+		$prod.="<td>
+			<div id=\"product_cell\">
+			<img id=\"product_image\" src=\"../".$producte["URL_imatge"]."\" />
+			<h3>".$producte["Nom"]."</h3>
+			<p>El preu d'aquest producte és de: ".$producte["Preu_IVA"]." €</p>
+			<button class=\"product_cell_button\" onclick=\"afegir(".$producte["Id_producte"].")\" >Afegir al carret</button>
+			</div>
+			</br>
+			</td>";
+
+		$i++;
+    		if($i % 3 == 0){
+    			$prod.="</tr>";
+			}
+			
+			
+	}
+
+	$prod.="</table>";
+	echo $prod;
+?>
+
+
+
+</section>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

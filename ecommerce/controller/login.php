@@ -1,7 +1,7 @@
 <?php
 
 //Ens connectem a la base de dades
-require_once __DIR__ . '/db_connect.php';
+require_once '../db_connect.php';
 /*Creem la connexió*/
 $db = new DB_CONNECT();
 $con = $db->connect();
@@ -21,9 +21,9 @@ if(isset($_POST['LoginButton']))
 			$row = mysqli_fetch_assoc($query);
 			if($resultat == 1){
 				$cookie_name = "isLogged";
-				$cookie_value = $row["Nom"];
+				$cookie_value = $row["Id_client"];
 				setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-				header("Location: index.html");
+				header("Location: ../index.php");
 			}else{
 				echo "Email o contrasenya incorrectes";
 			}

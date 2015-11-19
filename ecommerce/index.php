@@ -25,7 +25,8 @@
 
 <body>
 
-<header id="header"></header>
+<header id="header">
+</header>
 
 <section id="container">
 
@@ -41,18 +42,19 @@
 		<p>Els nostres productes</p>
 		<table>
 			<tr>
-				<td><a href="producte_categoria.html"><img src="resources/img/pulseres.png" alt="Pulseres" width="250px" height="250px"></a></td>
-				<td><a href="producte_categoria.html"><img src="resources/img/rellotges.png" alt="Rellotges" width="250px" height="250px"></a></td>
+				<td><a href="controller/producte_categoria_controller.php?id=1"><img src="resources/img/pulseres.png" alt="Pulseres" width="250px" height="250px"></a></td>
+				<td><a href="controller/producte_categoria_controller.php?id=2"><img src="resources/img/rellotges.png" alt="Rellotges" width="250px" height="250px"></a></td>
 			</tr>
 			<tr>
-				<td><a href="producte_categoria.html"><img src="resources/img/tags.png" alt="Tags" width="250px" height="250px"></a></td>
-				<td><a href="tecnologia-nfc.html">Descobreix més sobre la tecnologia NFC</a></td>
+				<td><a href="controller/producte_categoria_controller.php?id=3"><img src="resources/img/tags.png" alt="Tags" width="250px" height="250px"></a></td>
+				<td><a href="view/tecnologia-nfc.html">Descobreix més sobre la tecnologia NFC</a></td>
 			</tr>
 		</table>
 	</div>
 </section>
 
-<footer id="footer"></footer>
+<footer id="footer">
+</footer>
 
 </body>
 </html>

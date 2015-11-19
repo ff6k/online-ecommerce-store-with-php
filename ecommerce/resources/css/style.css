@@ -1,9 +1,11 @@
-body{
+﻿body{
 	margin: auto;
 	background-color: #CCE6FF;
 	font-family: Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 #container{
@@ -120,19 +122,24 @@ nav li ul li{
 
 #carrito{
 	float: right;
-	margin-right: -51.5%;
+	margin-right: -40.5%;
 	margin-top: 150px;
+	width: 12.5%;
 	border: 2px outset #6699FF;
 	border-radius: 5px;
 	height: 200px;
 	background-color: white;
-	opacity: 0.5;
+	opacity: 1;
 	z-index: 99999; /*En teoria ja esta a dalt de tot però així me'n asseguro*/
 }
 
+#carrito_container{
+	margin-right: 0;
+	width: 100%;
+}
+
 #carrito:hover{
-	padding-right: 240px;
-	opacity: 1;
+	padding-right: 20%;
 	-webkit-transition: all 0.5s ease;
 }
 
