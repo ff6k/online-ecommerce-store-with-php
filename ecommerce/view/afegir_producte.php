@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ca">
 <head>
 	<meta charset="utf-8">
@@ -30,9 +30,18 @@
 
 <h1>Afegeix un producte</h1>
 
-<form id="afegir_producte" onClick="insertar()" method="POST">
+<form id="afegir_producte" action="../model/afegir_producte.php" method="post" enctype="multipart/form-data">
 	<p>Nom del producte: <input type="text" name="nom_producte" placeholder="Nom producte"></p>
-	<p>Categoria: <input type="radio" name="categoria" value="1" checked>Pulsera	 <input type="radio" name="categoria" value="2">Rellotge <input type="radio" name="categoria" value="3">Tag</p>
+	<p>Categoria:
+
+	<?php foreach($categories as $categoria){
+						$id = $categoria["Id_categoria"];
+						$nom = $categoria["Nom_categoria"];
+						?>
+	 <input type="radio" name="categoria" value=<?php echo "\"".$id."\""; ?> ><?php echo $nom; ?> 
+	 <?php } ?>
+
+	</p>
 	<p>Stock: <input type="number" min="0" name="stock" placeholder="0"></p>
 	<p>Descripció del producte: </br> <input type="text" name="descripcio_producte" class="descripcio" placeholder="Entra una descripció del producte."></p>
 	<p>PVP: <input type="number" min="0" name="pvp_producte" placeholder="0"></p>

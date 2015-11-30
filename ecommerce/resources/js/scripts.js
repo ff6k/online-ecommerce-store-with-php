@@ -113,7 +113,7 @@ function logout(){
     location.reload();
 }
 
-function afegir(id_producte, nom_producte){
+function afegir(id_producte, nom_producte, stock){
 
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -122,7 +122,7 @@ function afegir(id_producte, nom_producte){
     else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte, true);
+    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte+"&stock="+stock, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState !== 4) { return; }

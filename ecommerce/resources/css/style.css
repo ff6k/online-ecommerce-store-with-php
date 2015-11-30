@@ -1,6 +1,6 @@
 ﻿body{
 	margin: auto;
-	background-color: #CCE6FF;
+	background-color: white;
 	font-family: Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -10,7 +10,7 @@
 
 #container{
 	text-align: justify;
-	width: 60%;
+	width: 65%;
 	margin: auto;
 	padding: 8px;
 	padding-left: 20px;
@@ -81,7 +81,7 @@ nav li ul li{
 
 #login {
 	width: 100%;
-	background-color: green;
+	background-color: #1E5092;
 	border:3px 0px 0px 0px solid #FFFFFF;
 	color: white;
 	
@@ -100,9 +100,9 @@ nav li ul li{
 #search{
 	float: left;
 	padding: 8px;
-	margin-left: 10%;
+	margin-left: 2%;
 	width: 65%;
-	border: 2px solid white;
+	border: 2px solid #99CCFF;
 }
 
 #search_button{
@@ -110,7 +110,7 @@ nav li ul li{
 	color: white;
 	float:left;
 	background-color:#6699FF;
-	margin-right: 10%;
+	margin-right: 2%;
 	border:3px 0px 0px 0px solid #FFFFFF;
 	height: 35px;
 }
@@ -122,12 +122,13 @@ nav li ul li{
 
 #carrito{
 	float: right;
-	margin-right: -40.5%;
-	margin-top: 150px;
-	width: 12.5%;
+	margin-right: -47.5%;
+	margin-top: 50px;
+	width: 24%;
 	border: 2px outset #6699FF;
 	border-radius: 5px;
 	height: auto;
+	min-height: 150px;
 	background-color: white;
 	opacity: 1;
 	z-index: 99999; /*En teoria ja esta a dalt de tot però així me'n asseguro*/
@@ -139,7 +140,9 @@ nav li ul li{
 }
 
 #carrito:hover{
-	padding-right: 20%;
+	
+	width: 24%;
+	padding-right: 14%;
 	-webkit-transition: all 0.5s ease;
 }
 
@@ -147,7 +150,7 @@ nav li ul li{
 	margin-left: -10px;
 	margin-top: -10px;
 	opacity: 1;
-	border: 2px solid red;
+	border: 2px solid #097FB7;;
 	border-radius: 30px;
 	z-index: 99999;
 }
@@ -384,15 +387,17 @@ nav li ul li{
 }
 
 #slider_right{
-	right: 19.85%;
+	right: 17.4%;
 }
 
 #product_cell{
 	text-align: center;
+
 }
 
-#product_image{
-	width: 100%;
+.product_image{
+	width: 270px;
+	height: auto;
 }
 
 .product_cell_button{
@@ -409,4 +414,8 @@ nav li ul li{
 .descripcio{
 	width: 425px;
 	height: 20px;
+}
+
+tr{
+	width: 100%;
 }

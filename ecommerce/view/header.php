@@ -93,14 +93,19 @@ $categories = json_decode($categories, true);
 		if(isset($_SESSION['carro'])) {?>
 			<ul>
 			<?php
+			$productes_afegits = array();
 			$array_productes=explode(",", $_SESSION['carro']);
 			foreach($array_productes as $producte) {
-				$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
-				$nom_producte = trim($nom_producte, "]");
-				?>
-				<li><?php echo $nom_producte;?></li>
-				
-			<?php } ?>
+
+				$id_producte = substr($producte, 0, strpos($producte, "/"));
+				if(!in_array($id_producte, $productes_afegits)){
+					$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
+					$nom_producte = trim($nom_producte, "]");	?>		
+					<li><?php echo $nom_producte." (x".count(preg_grep($producte, $array_productes)).")";?></li>
+					<?php
+					$productes_afegits[] = $id_producte;
+				}
+			} ?>
 			</ul>
 			<?php 
 		}else{
