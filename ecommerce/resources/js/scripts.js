@@ -113,11 +113,8 @@ function logout(){
     location.reload();
 }
 
-function afegir(id){
+function afegir(id_producte, nom_producte){
 
-var query = window.location.search.substring(1); //S'agafa l'adreça
-    var array = query.split("="); //Separa l'adreça on es trobi un "=" d'aquesta manera separem el link?id= de la id que es passa com a parametre
-    var id = array[1]; //La separació la fa amb arrays, així que la id es troba en la segona posició, és a dir, la 1.
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -125,7 +122,7 @@ var query = window.location.search.substring(1); //S'agafa l'adreça
     else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id="+id, true);
+    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState !== 4) { return; }

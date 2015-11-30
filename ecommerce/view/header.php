@@ -93,13 +93,14 @@ $categories = json_decode($categories, true);
 		if(isset($_SESSION['carro'])) {?>
 			<ul>
 			<?php
-		
-			$array_productes = unserialize($_SESSION['carro'])
-			//foreach($array_productes as $producte) {
+			$array_productes=explode(",", $_SESSION['carro']);
+			foreach($array_productes as $producte) {
+				$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
+				$nom_producte = trim($nom_producte, "]");
 				?>
-					<li><?php echo $array_productes;?></li>
+				<li><?php echo $nom_producte;?></li>
 				
-			<?php //} ?>
+			<?php } ?>
 			</ul>
 			<?php 
 		}else{
