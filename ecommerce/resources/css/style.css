@@ -405,3 +405,8 @@ nav li ul li{
 .product_cell_button:hover{
 	background-color: #99CCFF;
 }
+
+.descripcio{
+	width: 425px;
+	height: 20px;
+}
