@@ -429,9 +429,18 @@ tr{
 
 #fila_carrito{
 	border: 1px solid grey;
-    padding: 20px;
+    padding: 10px;
 }
 
 #taula_carrito{
 	border-spacing: 0px;
+	width:100%;
+}
+
+.element_taula{
+	    text-align: center;
+}
+
+.header_taula{
+	font-weight: 900;
 }

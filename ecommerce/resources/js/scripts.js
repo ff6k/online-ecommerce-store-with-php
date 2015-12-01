@@ -122,7 +122,7 @@ function afegir(id_producte, nom_producte, stock){
     else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte+"&stock="+stock+"&afegint=1", true);
+    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte+"&stock="+stock, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState !== 4) { return; }
@@ -131,24 +131,45 @@ function afegir(id_producte, nom_producte, stock){
     };
 }
 
-function removeFromCart(id_producte){
+function borrar(id_producte){
+
+    borrarCarrito(id_producte);
+}
+
+
+function borrarCarrito(id_producte){
 
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
-    }
-    else { // code for IE6, IE5
+    }else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte='cap'&stock=0&afegint=0", true);
+
+    xmlhttp.open("GET","../model/borrar_producte_cistella.php?id_producte="+id_producte, true);
     xmlhttp.send();
+
     xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState !== 4) { return; }
     document.getElementById("carrito_container").innerHTML=xmlhttp.responseText;
-    return false;
+    refrescarResumCarrito();    
     };
-
-
-
 }
 
+function refrescarResumCarrito(){
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttpAux = new XMLHttpRequest();
+    }else { // code for IE6, IE5
+        xmlhttpAux = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+   
+    xmlhttpAux.open("GET","../model/refrescar_carrito.php", true);
+    xmlhttpAux.send();
+
+    xmlhttpAux.onreadystatechange = function(){
+    if (xmlhttpAux.readyState !== 4) { return; }
+    document.getElementById("container").innerHTML=xmlhttpAux.responseText;
+    };
+}

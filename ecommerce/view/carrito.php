@@ -25,10 +25,8 @@
 <body>
 
 <header id="header"></header>
-
 <section id="container">
-
-<h1>Carret</h1>
+	<h1>Carret</h1>
 
 <?php 
 	echo $taulaProductesCarrito;

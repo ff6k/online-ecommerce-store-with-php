@@ -1,6 +1,5 @@
-<?php
+	<?php 
 
-function getTaulaProductsCarrito(){
 
 	session_start();
 
@@ -70,7 +69,7 @@ function getTaulaProductsCarrito(){
 			$preu_total += $row["Preu_IVA"]*count(preg_grep($producte, $array_productes));
 
 			$carrito .= "<td id=\"fila_carrito\">";
-			$carrito .="<img class=\"element_taula\" src=\"../resources/img/delete-product.png\" onclick=\"borrar(".$id_producte.");\"/>";
+			$carrito .="<img class=\"element_taula\" src=\"../resources/img/delete-product.png\" onclick=\"borrar(".$id_producte."); refrescarResumCarrito();\"/>";
 			$carrito.="</td>";
 			$carrito .= "</tr>";
 		}
@@ -96,6 +95,6 @@ function getTaulaProductsCarrito(){
 
 	$carrito .="</table>";
 	
-	return $carrito;
-}
-?>
+	echo $carrito;
+
+	?>

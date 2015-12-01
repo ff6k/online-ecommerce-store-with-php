@@ -7,20 +7,25 @@ $con = $db->connect();
 
 session_start();
 
-if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["stock"])) {
+if(isset($_GET["id_producte"])) {
 	$item = $_GET["id_producte"];
-	$nom_item = $_GET["nom_producte"];
-	$stock = $_GET["stock"];
-	
-	if(isset($_SESSION['carro'])){
-		$array_productes_old=explode(",", $_SESSION['carro']);
-		if(count(preg_grep("[".$item."/".$nom_item."]", $array_productes_old)) < $stock){ /* Comprovem que no s'hagi afegit mes cops que stock hi ha! */
-			$_SESSION['carro']  = $_SESSION['carro'].",[".$item."/".$nom_item."]";
-		}
-	}else{
-		$_SESSION['carro']  = "[".$item."/".$nom_item."]";
-	}
 
+	$array_productes=explode(",", $_SESSION['carro']);
+	unset($_SESSION['carro']);
+	$_SESSION['carro'] = "";
+
+	foreach($array_productes as $producte){
+		$id_producte = substr($producte, 0, strpos($producte, "/"));
+		$id_producte = trim($id_producte, "[");	
+
+		if($id_producte != $item){
+			if($_SESSION['carro'] === ""){
+				$_SESSION['carro'] = $producte;
+			}else{
+				$_SESSION['carro']  = $_SESSION['carro'].",".$producte;
+			}
+		}
+	}
 	$productes_afegits = array();
 
 	$carrito = "<ul>";
@@ -31,12 +36,11 @@ if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["s
 		$id_producte = trim($id_producte, "[");	
 		if(!in_array($id_producte, $productes_afegits)){
 			$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
-			$nom_producte = trim($nom_producte, "]");			
+			$nom_producte = trim($nom_producte, "]");	
 			$carrito.=	"<li>".$nom_producte." (x".count(preg_grep($producte, $array_productes)).")</li>";
 			$productes_afegits[] = $id_producte;
 		}
 	}
-
 	}
 	$carrito.="</ul>";
 	$carrito.="<a href=\"../controller/carrito.php\"><button id=\"button_comprar\">Comprar</button></a>";

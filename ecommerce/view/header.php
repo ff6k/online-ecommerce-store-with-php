@@ -97,7 +97,7 @@ $categories = json_decode($categories, true);
 			$productes_afegits = array();
 			$array_productes=explode(",", $_SESSION['carro']);
 			foreach($array_productes as $producte) {
-
+				if($producte != ""){
 				$id_producte = substr($producte, 0, strpos($producte, "/"));
 				$id_producte = trim($id_producte, "[");	
 				if(!in_array($id_producte, $productes_afegits)){
@@ -107,6 +107,7 @@ $categories = json_decode($categories, true);
 					<?php
 					$productes_afegits[] = $id_producte;
 				}
+			}
 			} ?>
 			</ul>
 
