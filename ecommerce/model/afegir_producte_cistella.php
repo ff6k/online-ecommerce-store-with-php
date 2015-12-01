@@ -7,18 +7,31 @@ $con = $db->connect();
 
 session_start();
 
-if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["stock"])){
+if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["stock"]) && isset($_GET["afegint"])){
 	$item = $_GET["id_producte"];
 	$nom_item = $_GET["nom_producte"];
 	$stock = $_GET["stock"];
-	
+	$afegint = $_GET["afegint"];
 	$array_productes_old=explode(",", $_SESSION['carro']);
-	if(isset($_SESSION['carro'])){
-		if(count(preg_grep("[".$item."/".$nom_item."]", $array_productes_old)) < $stock){ /* Comprovem que no s'hagi afegit mes cops que stock hi ha! */
-			$_SESSION['carro']  = $_SESSION['carro'].",[".$item."/".$nom_item."]";
+
+	if($afegint == "1"){
+	
+		if(isset($_SESSION['carro'])){
+			if(count(preg_grep("[".$item."/".$nom_item."]", $array_productes_old)) < $stock){ /* Comprovem que no s'hagi afegit mes cops que stock hi ha! */
+				$_SESSION['carro']  = $_SESSION['carro'].",[".$item."/".$nom_item."]";
+			}
+		}else{
+			$_SESSION['carro']  = "[".$item."/".$nom_item."]";
 		}
-	}else{
-		$_SESSION['carro']  = "[".$item."/".$nom_item."]";
+	}else if($afegint == "0"){
+		if(isset($_SESSION['carro'])){
+			$_SESSION['carro'] = "";
+			foreach($array_productes_old as $producte_old){
+				if($producte_old != "[".$item."/".$nom_item."]"){
+					$_SESSION['carro']  = $_SESSION['carro'].",".$producte_old;
+				}
+			}
+		}
 	}
 
 	$productes_afegits = array();
@@ -27,6 +40,7 @@ if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["s
 	$array_productes=explode(",", $_SESSION['carro']);
 	foreach($array_productes as $producte) {
 		$id_producte = substr($producte, 0, strpos($producte, "/"));
+		$id_producte = trim($id_producte, "[");	
 		if(!in_array($id_producte, $productes_afegits)){
 			$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
 			$nom_producte = trim($nom_producte, "]");			
@@ -36,6 +50,7 @@ if(isset($_GET["id_producte"]) && isset($_GET["nom_producte"]) && isset($_GET["s
 
 	}
 	$carrito.="</ul>";
+	$carrito.="<a href=\"../controller/carrito.php\"><button id=\"button_comprar\">Comprar</button></a>";
 
 	echo $carrito;
 }

@@ -122,12 +122,33 @@ function afegir(id_producte, nom_producte, stock){
     else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte+"&stock="+stock, true);
+    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte="+nom_producte+"&stock="+stock+"&afegint=1", true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState !== 4) { return; }
     document.getElementById("carrito_container").innerHTML=xmlhttp.responseText;
     return false;
     };
+}
+
+function removeFromCart(id_producte){
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    }
+    else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","../model/afegir_producte_cistella.php?id_producte="+id_producte+"&nom_producte='cap'&stock=0&afegint=0", true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function(){
+    if (xmlhttp.readyState !== 4) { return; }
+    document.getElementById("carrito_container").innerHTML=xmlhttp.responseText;
+    return false;
+    };
+
+
+
 }
 

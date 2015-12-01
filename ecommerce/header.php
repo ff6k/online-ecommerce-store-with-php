@@ -86,7 +86,8 @@ $categories = json_decode($categories, true);
 </div>
 
 <div id="carrito">
-	<img id="c_img" src="resources/img/carrito.png" width="30px" height="30px"/>
+	<a href="controller/carrito.php">
+	<img id="c_img" src="resources/img/carrito.png" width="30px" height="30px"/></a>
 	<div id="carrito_container">
 		<?php
 		if(isset($_SESSION['carro'])) {?>
@@ -97,6 +98,7 @@ $categories = json_decode($categories, true);
 			foreach($array_productes as $producte) {
 
 				$id_producte = substr($producte, 0, strpos($producte, "/"));
+				$id_producte = trim($id_producte, "[");	
 				if(!in_array($id_producte, $productes_afegits)){
 					$nom_producte=substr($producte, strpos($producte, "/")+1, strpos($producte, "]"));
 					$nom_producte = trim($nom_producte, "]");	?>		
@@ -106,6 +108,7 @@ $categories = json_decode($categories, true);
 				}
 			} ?>
 			</ul>
+			<a href="controller/carrito.php"><button id="button_comprar">Comprar</button></a>
 			<?php 
 		}else{
 			echo "No hi ha cap producte";
